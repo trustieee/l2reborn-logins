@@ -1,0 +1,46 @@
+<script lang="ts">
+	import type { User } from '$lib/types';
+
+	export let addUser: (user: User) => void;
+
+	let description = '';
+	let id = '';
+	let password = '';
+
+	function handleSubmit() {
+		addUser({ description, id, password });
+		description = '';
+		id = '';
+		password = '';
+	}
+</script>
+
+<form on:submit|preventDefault={handleSubmit}>
+	<div class="flex space-x-3">
+		<input
+			class="px-4 py-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+			bind:value={description}
+			placeholder="Description"
+			required
+		/>
+		<input
+			class="px-4 py-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+			bind:value={id}
+			placeholder="ID"
+			required
+		/>
+		<input
+			class="px-4 py-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+			bind:value={password}
+			type="password"
+			placeholder="Password"
+			required
+		/>
+		<button
+			type="submit"
+			class="mb-1 px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+		>
+			Add User
+		</button>
+	</div>
+</form>
