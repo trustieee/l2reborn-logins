@@ -152,9 +152,7 @@ hideLogin=0
 						<p class="text-xl text-gray-400">
 							Put the downloaded file in your reborn origins system directory:
 						</p>
-						<p class="text-lg text-gray-200 mt-2">
-							C:\Program Files (x86)\Reborn\games\origins\system
-						</p>
+						<p class="text-lg text-gray-200 mt-2">\Reborn\games\origins\system</p>
 					</div>
 				</div>
 				<div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">

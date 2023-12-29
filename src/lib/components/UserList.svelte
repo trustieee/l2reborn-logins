@@ -20,6 +20,7 @@
 	<table class="w-1/3 divide-y divide-gray-600 text-left text-gray-200 mt-16 text-lg">
 		<thead class="bg-gray-800">
 			<tr>
+				<th class="px-12 py-4"></th>
 				<th class="px-12 py-4 text-xs font-medium uppercase tracking-wider">Description</th>
 				<th class="px-12 py-4 text-xs font-medium uppercase tracking-wider">ID</th>
 				<th class="px-12 py-4 text-xs font-medium uppercase tracking-wider">Password</th>
@@ -38,7 +39,8 @@
 			class="bg-gray-900 divide-y divide-gray-700"
 		>
 			{#each $users as user (user.id)}
-				<tr animate:flip={{ duration: flipDurationMs }}>
+				<tr animate:flip={{ duration: flipDurationMs }} class="hover:bg-gray-800">
+					<td class="px-2 cursor-move text-2xl">≡</td>
 					<td class="px-12 py-4">{user.description}</td>
 					<td class="px-12 py-4">{user.id}</td>
 					<td class="px-12 py-4">{'*'.repeat(user.password.length)}</td>
