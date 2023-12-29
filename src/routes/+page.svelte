@@ -165,7 +165,7 @@ hideLogin=0
 				<div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
 					<button
 						type="button"
-						class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+						class="mt-3 w-full inline-flex justify-center rounded-lg border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
 						on:click={closeModal}
 					>
 						Close
@@ -180,7 +180,7 @@ hideLogin=0
 	<h1 class="text-4xl font-bold mb-4">L2 Reborn - Login Manager</h1>
 
 	<button
-		class="mb-4 px-4 py-2 font-bold text-white border border-blue-500 rounded hover:bg-blue-500
+		class="mb-4 px-4 py-2 font-bold text-white border border-green-500 rounded-lg hover:bg-green-500
 		{!$users || $users.length <= 0
 			? 'bg-gray-700 border-none opacity-50 hover:bg-none cursor-not-allowed '
 			: ''}"
@@ -198,8 +198,8 @@ hideLogin=0
 			<p class="text-2xl opacity-25">or</p>
 			<p class="text-2xl opacity-25">drop your ini file here</p>
 			<input
-				class="border-4 border-dashed border-gray-400 py-32 px-32 text-center mb-4
-				w-full mt-2 drop-zone {dragging ? 'dragging' : ''}"
+				class="border-4 border-dashed border-gray-600 py-32 px-32 mt-10 drop-zone
+				{dragging ? 'dragging' : ''}"
 				type="file"
 				tabindex="0"
 				on:dragover={dragOver}
