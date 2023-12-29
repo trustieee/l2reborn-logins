@@ -5,3 +5,4 @@ declare namespace svelteHTML {
 		'on:finalize'?: (event: CustomEvent<DndEvent<T>> & { target: EventTarget & T }) => void;
 	}
 }
+declare const __APP_VERSION__: string;

@@ -6,6 +6,8 @@
 	import UserList from '$lib/components/UserList.svelte';
 	import type { User } from '$lib/types';
 
+	const version = __APP_VERSION__;
+
 	let users = writable<User[]>([]);
 	let showModal = false;
 	let dragging = false;
@@ -129,6 +131,8 @@ hideLogin=0
 		dragging = false;
 	};
 </script>
+
+<p class="absolute top-0 right-1 text-sm italic opacity-50">version {version}</p>
 
 {#if showModal}
 	<div
