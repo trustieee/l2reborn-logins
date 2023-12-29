@@ -41,7 +41,11 @@
 		/>
 		<button
 			type="submit"
-			class="mb-1 px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+			class="mb-1 px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700
+			{!description || !id || !password
+				? 'bg-gray-700 border-none opacity-50 hover:bg-none cursor-not-allowed'
+				: ''}"
+			disabled={!description || !id || !password}
 		>
 			Add User
 		</button>
