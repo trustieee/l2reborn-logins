@@ -8,10 +8,10 @@
 	export let deleteUser: (userId: string) => void;
 
 	const flipDurationMs = 15;
-	function handleDndConsider(e) {
+	function handleDndConsider(e: CustomEvent<DndEvent<User>>) {
 		$users = e.detail.items;
 	}
-	function handleDndFinalize(e) {
+	function handleDndFinalize(e: CustomEvent<DndEvent<User>>) {
 		$users = e.detail.items;
 	}
 </script>

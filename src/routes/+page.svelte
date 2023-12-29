@@ -15,11 +15,14 @@
 	}
 
 	function addUser(user: User) {
+		if ($users.find((u) => u.id === user.id)) {
+			return;
+		}
 		users.update((users) => [...users, user]);
 	}
 
 	function deleteUser(userId: string) {
-		users.update((users) => users.filter((u, i) => u.id !== userId));
+		users.update((users) => users.filter((u) => u.id !== userId));
 	}
 
 	function downloadIni() {
@@ -148,11 +151,11 @@ hideLogin=0
 					<h3 class="text-3xl leading-6 font-medium text-gray-200" id="modal-title">
 						File Downloaded
 					</h3>
-					<div class="mt-4">
-						<p class="text-xl text-gray-400">
+					<div class="mt-12">
+						<p class="text-gray-400">
 							Put the downloaded file in your reborn origins system directory:
 						</p>
-						<p class="text-lg text-gray-200 mt-2">\Reborn\games\origins\system</p>
+						<p class="text-gray-400 mt-2 ml-14">->>> \Reborn\games\origins\system</p>
 					</div>
 				</div>
 				<div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">

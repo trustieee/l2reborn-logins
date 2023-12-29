@@ -6,12 +6,14 @@
 	let description = '';
 	let id = '';
 	let password = '';
+	let descriptionInput: HTMLInputElement;
 
 	function handleSubmit() {
 		addUser({ description, id, password });
 		description = '';
 		id = '';
 		password = '';
+		descriptionInput.focus();
 	}
 </script>
 
@@ -19,6 +21,7 @@
 	<div class="flex space-x-3">
 		<input
 			class="px-4 py-2 bg-gray-800 text-gray-200 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+			bind:this={descriptionInput}
 			bind:value={description}
 			placeholder="Description"
 			required
